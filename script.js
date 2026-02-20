@@ -225,3 +225,24 @@
     audioCtx = null;
   });
 })();
+  const facts = [
+    'Cats sleep 12–16 hours a day on average.',
+    'A group of kittens is called a kindle.',
+    'Cats have five toes on their front paws, but only four on the back ones.',
+    'Adult cats can run up to 30 mph (48 km/h).',
+    'Cats purr for many reasons: contentment, healing, or communication.',
+    'Whiskers help cats sense nearby objects and changes in air currents.',
+    'Most cats prefer vertical space — shelves and perches make them happy.'
+  ];
+
+  function showRandomFact(){
+    const el = document.getElementById('fact');
+    if(!el) return;
+    const idx = Math.floor(Math.random()*facts.length);
+    el.textContent = facts[idx];
+  }
+
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const btn = document.getElementById('factBtn');
+    if(btn) btn.addEventListener('click', showRandomFact);
+  });

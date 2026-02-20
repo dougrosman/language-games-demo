@@ -8,22 +8,54 @@
 </head>
 <body>
     <canvas id="snow-canvas" aria-hidden="true"></canvas>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>All About Cats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>All About Cats</h1>
+        <p class="tagline">Cute, curious, and endlessly entertaining.</p>
+    </header>
 
-    <div class="overlay">
-        <main class="card">
-            <h1>Winter Chill</h1>
-            <p class="subtitle">Soft snow, quiet lights, and mellow ambient audio.</p>
+    <main class="container">
+        <section class="hero">
+            <img src="https://placekitten.com/800/400" alt="Cute cat">
+        </section>
 
-            <div class="controls">
-                <button id="toggleAudio">Start Ambient</button>
-                <label class="range">Volume
-                    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
-                </label>
+        <section class="intro">
+            <h2>Why we love cats</h2>
+            <p>Cats are wonderful companions. Here are a few reasons:</p>
+            <ul>
+                <li>Independent and playful</li>
+                <li>Great at napping</li>
+                <li>Excellent hunters (of toys)</li>
+            </ul>
+        </section>
+
+        <section class="facts">
+            <h2>Fun Cat Facts</h2>
+            <button id="factBtn">Show a random cat fact</button>
+            <p id="fact" class="fact" aria-live="polite"></p>
+        </section>
+
+        <section class="gallery">
+            <h2>Cat Gallery</h2>
+            <div class="grid">
+                <img src="https://placekitten.com/300/200" alt="kitten 1">
+                <img src="https://placekitten.com/301/200" alt="kitten 2">
+                <img src="https://placekitten.com/300/201" alt="kitten 3">
             </div>
+        </section>
+    </main>
 
-            <p class="note">Tip: press the button once to start audio (browsers require a user gesture).</p>
-        </main>
-    </div>
+    <footer class="site-footer">
+        <p>Made with ❤️ for cat lovers.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
