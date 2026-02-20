@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Winter Chill</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello!</h1>
+    <canvas id="snow-canvas" aria-hidden="true"></canvas>
+
+    <div class="overlay">
+        <main class="card">
+            <h1>Winter Chill</h1>
+            <p class="subtitle">Soft snow, quiet lights, and mellow ambient audio.</p>
+
+            <div class="controls">
+                <button id="toggleAudio">Start Ambient</button>
+                <label class="range">Volume
+                    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+                </label>
+            </div>
+
+            <p class="note">Tip: press the button once to start audio (browsers require a user gesture).</p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
